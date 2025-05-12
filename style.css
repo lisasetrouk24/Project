@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.377)), url(/img/desk-3139127_1280.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+    border: none;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+.menu a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-bottom: 2px solid rgb(60, 103, 243);
+    transition: 0.5s linear;
+}
+
+.menu a:hover::before {
+    width: 90%;
+}
+
+.JoinUs a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    background: rgb(76, 94, 175);
+    border-radius: 8px;
+}
+
+.JoinUs a:hover {
+    background: transparent;
+    border: 1px solid rgb(37, 99, 190);
+
+}
+
+.h-txt {
+    max-width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+
+}
+
+.h-txt span {
+    letter-spacing: 5px;
+}
+
+.h-txt h1 {
+    font-size: 65px;
+}
+
+.h-txt a {
+    text-decoration: none;
+    background: rgb(76, 94, 175);
+    color: white;
+    padding: 10px 20px;
+    letter-spacing: 5px;
+    transition: 0.5s;
+
+}
+
+.h-txt a:hover {
+    background: transparent;
+    border: 1px solid rgb(37, 99, 190);
+}
+
+
+/* SECTION 1: Hero 
+@media(max-width:576px) {
+    header>nav {
+        display: none;
+    }
+
+}
+*/
+
+
+
+
+/* SECTION 1: Hero */
+.hero-section {
+    background-color: #3c2a2259;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    margin: 5px 0;
+    gap: 40px;
+    margin-bottom: 0;
+    border: none;
+    box-shadow: none;
+    height: 100vh;
+}
+
+.hero-section .text {
+    flex: 5;
+    text-align: left;
+    padding-left: 10%;
+    font-size: 22px
+}
+
+.hero-section .text h2 {
+    font-size: 55px;
+}
+
+.headshot {
+    display: grid;
+    place-items: center;
+}
+
+.hero-section .headshot {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    padding-right: 10%;
+}
+
+.hero-section .headshot img {
+    width: min(25rem, 90%);
+    border-radius: 100%;
+}
+
+
+
+/* SECTION 2: Skills */
+.skills-section {
+    margin: 200px 0;
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.skills-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.skills-section .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 200px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1.5px solid #d3d3d3;
+    border-radius: 5px;
+}
+
+.skills-section .cells .cell img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.skills-section .cells .cell span {
+    font-size: 18px;
+}
+
+/* SECTION 3: My Porjects */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    background-color: white;
+
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    background-color: white;
+
+}
+
+.box {
+    height: 350px;
+    width: 18%;
+    background-color: rgba(128, 107, 80, 0.795);
+    margin: 60px;
+    text-align: center;
+    border-radius: 5px;
+
+}
