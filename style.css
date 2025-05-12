@@ -104,25 +104,29 @@ nav {
 }
 
 
-/* SECTION 1: Hero 
-@media(max-width:576px) {
-    header>nav {
-        display: none;
-    }
+/* SECTION sklls*/
 
+.skills {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 3px 0;
 }
-*/
+
+.skills>img {
+    width: 100px;
+    height: 100px;
+}
 
 
-
-
-/* SECTION 1: Hero */
+/* SECTION 1: about */
 .hero-section {
-    background-color: #3c2a2259;
+    background-color: #ffffff59;
     display: flex;
     align-items: center;
     padding: 0 50px;
-    margin: 5px 0;
+    margin: 0px 0;
     gap: 40px;
     margin-bottom: 0;
     border: none;
@@ -144,6 +148,7 @@ nav {
 .headshot {
     display: grid;
     place-items: center;
+
 }
 
 .hero-section .headshot {
@@ -155,56 +160,9 @@ nav {
 
 .hero-section .headshot img {
     width: min(25rem, 90%);
-    border-radius: 100%;
-}
-
-
-
-/* SECTION 2: Skills */
-.skills-section {
-    margin: 200px 0;
-    padding: 0 50px;
-    margin-bottom: 100px;
-}
-
-.skills-section h2 {
-    text-align: center;
-    font-size: 35px;
-}
-
-.skills-section .text {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.skills-section .cells {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.skills-section .cells .cell {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-
-    width: 200px;
-    padding: 10px 20px;
-    margin: 10px;
-    border: 1.5px solid #d3d3d3;
-    border-radius: 5px;
-}
-
-.skills-section .cells .cell img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    border-radius: 2px;
-}
-
-.skills-section .cells .cell span {
-    font-size: 18px;
+    border-radius: 50%;
+    border: 5px solid #00bfff;
+    box-shadow: 0 0 15px #00bfff;
 }
 
 /* SECTION 3: My Porjects */
@@ -215,6 +173,11 @@ nav {
     min-height: 400px;
     background-color: white;
 
+}
+
+h2 {
+    text-align: center;
+    font-size: 35px;
 }
 
 .container1 {

@@ -20,8 +20,8 @@
 </head>
 
 <body>
+    <!-- Header-->
     <header>
-
         <nav>
             <div class="logo">
                 Lisa setrouk
@@ -29,8 +29,8 @@
 
             <div class="menu">
                 <a href="#">Home</a>
-                <a href="#">About Me</a>
-                <a href="#">My Project</a>
+                <a href="#AboutMe">About Me</a>
+                <a href="#MyProject">My Project</a>
                 <a href="#">Contact Me</a>
             </div>
 
@@ -50,8 +50,19 @@
     </header>
 
     <main>
+
+        <!-- SECTION 2-->
+        <section>
+            <div class="skills">
+                <img src="img/img-HTML.png" alt="html logo">
+                <img src="img/img-CSS.png" alt="css logo">
+            </div>
+        </section>
+
+
+
         <!-- SECTION 1: Hero -->
-        <section class="hero-section">
+        <section class="hero-section" id="AboutMe">
             <div class="text">
                 <h2>Hi, I'm Lisa👋</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsam assumenda est <br> perspiciatis
@@ -66,50 +77,21 @@
             </div>
         </section>
 
-        <!-- SECTION 2: Skills -->
-        <section id="skills" class="skills-section">
-            <h2>Skills</h2>
-            <div class="text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, perspiciatis iure distinctio
-                quidem aperiam necessitatibus omnis possimus excepturi amet quos rerum? Perferendis repellat natus saepe
-                quaerat quibusdam neque recusandae optio?
-            </div>
+        <br><br><br><br><br>
 
-            <div class="cells">
-                <div class="cell">
-                    <img src="img/img-HTML.png" alt="html logo">
-                    <span>HTML</span>
-                </div>
-
-                <div class="cell">
-                    <img src="img/img-CSS.png" alt="css logo">
-                    <span>CSS</span>
-                </div>
-
-                <div class="cell">
-                    <img src="img/img-Bootstrap.png" alt="javascript logo">
-                    <span>Bootstrap</span>
-                </div>
-
-                <div class="cell">
-                    <img src="img/img-SASS.png" alt="node logo">
-                    <span>Sass</span>
-                </div>
-            </div>
-            <br><br><br><br>
-
-            <!-- SECTION 3 My Pojects-->
-            <div class="container">
-                <div class="box">1</div>
-                <div class="box">2</div>
-                <div class="box">3</div>
-            </div>
-            <br><br><br>
-            <div class="container1">
-                <div class="box">4</div>
-                <div class="box">5</div>
-                <div class="box">6</div>
-            </div>
+        <!-- SECTION 3 My Pojects-->
+        <h2>My Projects</h2>
+        <div class="container" id="MyProject">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <br><br><br>
+        <div class="container1">
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
 
     </main>
 </body>
