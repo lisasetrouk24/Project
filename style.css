@@ -166,35 +166,67 @@ nav {
 }
 
 /* SECTION 3: My Porjects */
-.container {
+
+.card-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    min-height: 400px;
-    background-color: white;
-
+    gap: 65px 30px;
+    padding: 40px 40px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-h2 {
-    text-align: center;
-    font-size: 35px;
-}
-
-.container1 {
+.card {
+    flex: 0 1 calc(33.333% - 20px);
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
-    background-color: white;
-
+    flex-direction: column;
 }
 
-.box {
-    height: 350px;
-    width: 18%;
-    background-color: rgba(128, 107, 80, 0.795);
-    margin: 60px;
-    text-align: center;
-    border-radius: 5px;
+.card img {
+    width: 100%;
+    height: auto;
+}
 
+.card-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    margin: 0 0 10px;
+}
+
+.card-content p {
+    flex-grow: 1;
+    color: #555;
+}
+
+.card-content .btn {
+    margin-top: 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Responsive for mobile */
+@media (max-width: 900px) {
+    .card {
+        flex: 0 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 0 1 100%;
+    }
 }
