@@ -165,6 +165,15 @@ nav {
     box-shadow: 0 0 15px #00bfff;
 }
 
+/* SECTION 2: skills */
+
+.skills {
+    height: 150px;
+    transform: scale(0.6);
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
 /* SECTION 3: My Porjects */
 
 .card-container {

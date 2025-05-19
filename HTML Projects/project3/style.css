@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: transparent url('img/Coffee.png') 0% 0% no-repeat padding-box;
+    width: 1000px;
+    height: 1081px;
+}
+
+h1 {
+    text-align: right;
+    padding-top: 271px;
+    padding-left: 1350px;
+    font: normal normal 900 35px/63px Heebo;
+    letter-spacing: 0px;
+    color: #020253;
+    opacity: 1;
+}
