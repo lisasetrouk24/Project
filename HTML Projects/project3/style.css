@@ -84,30 +84,36 @@ button {
     }
 
     img {
-        object-fit: cover;
-        height: 150px;
+        flex: auto;
+        height: 700px;
         width: 100%;
     }
 
     h1 {
-        font: normal normal 900 30px/41px Heebo;
+        font: normal normal 900 60px Heebo;
         text-align: center;
         padding-top: 20px;
     }
 
     p {
-        font: normal normal normal 18px/22px Heebo;
+        font: normal normal normal 30px Heebo;
         text-align: center;
     }
 
     form {
-        padding: 0 10px;
+        padding: 80px 80px;
+        gap: 60px;
     }
 
 
+    .input {
+        padding: 15px 5px;
+    }
+
     button {
-        padding-top: 15px;
+        padding: 15px 0;
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 }
