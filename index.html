@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 
     <title>Portfolio</title>
@@ -30,14 +32,14 @@
                 </label>
                 <input type="checkbox" name="check" id="check">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#Home">Home</a></li>
                     <li><a href="#">About Me</a></li>
-                    <li><a href="#">Projects</a></li>
+                    <li><a href="#Projects">Projects</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
         </nav>
-        <section class="section">
+        <section class="section" id="Home">
             <div class="section_container">
                 <div class="content">
                     <p class="subtitle">HELLO</p>
@@ -62,42 +64,31 @@
         </section>
     </header>
 
+    <!-- Skills-->
     <main>
+        <section id="skills" class="skills-section">
+            <div class="cells">
+                <div class="cell">
+                    <img src="img/html-5.png" alt="html logo">
+                    <span>HTML</span>
+                </div>
 
-        <!-- SECTION 2-->
-        <section>
-            <div class="skills">
-                <img src="img/html-5.png" alt="html logo">
-                <img src="img/css-3.png" alt="css logo">
-                <img src="img/git.png" alt="css logo">
+                <div class="cell">
+                    <img src="img/css-3.png" alt="css logo">
+                    <span>CSS</span>
+                </div>
+
+                <div class="cell">
+                    <img src="img/git.png" alt="javascript logo">
+                    <span>Git</span>
+                </div>
             </div>
         </section>
 
-
-
-        <!-- SECTION 1: Hero -->
-        <section class="hero-section" id="AboutMe">
-            <div class="text">
-                <h2>Hi, I'm Lisa👋</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsam assumenda est <br> perspiciatis
-                    labore
-                    quasi, iure dignissimos, libero, omnis sint necessitatibus ad. Hic expedita <br> eligendi tenetur
-                    quisquam id quaerat alias cumque, autem voluptatem in iure ut laudantium tempora <br> cupiditate
-                    voluptate est nemo impedit, quidem iusto, provident aperiam. Iste <br> repellat aperiam!</p>
-                <button>about me</button>
-            </div>
-
-            <div class="headshot">
-                <img src="img/headshot.jpg" alt="Lisa setrouk headshot">
-            </div>
-        </section>
-
-        <br><br><br><br><br>
-
-
-        <div class="card-container">
+        <!--container card-->
+        <div class="card-container" id="Projects">
             <div class="card">
-                <img src="img/desk-3139127_1280.jpg" alt="card1" />
+                <img src="img/pro1.png" alt="card1" />
                 <div class="card-content">
                     <h3>Card 1</h3>
                     <p>quasi, iure dignissimos, libero, omnis sint necessitatibus ad. Hic expedita <br> eligendi
@@ -107,7 +98,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="img/desk-3139127_1280.jpg" alt="card2" />
+                <img src="img/pro2.png" alt="card2" />
                 <div class="card-content">
                     <h3>Card 2</h3>
                     <p>quasi, iure dignissimos, libero, omnis sint necessitatibus ad. Hic expedita <br> eligendi
@@ -117,7 +108,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="img/desk-3139127_1280.jpg" alt="card3" />
+                <img src="img/pro3.png" alt="card3" />
                 <div class="card-content">
                     <h3>Card 3</h3>
                     <p>quasi, iure dignissimos, libero, omnis sint necessitatibus ad. Hic expedita <br> eligendi
@@ -127,7 +118,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="img/desk-3139127_1280.jpg" alt="card4" />
+                <img src="img/pro4.png" alt="card4" />
                 <div class="card-content">
                     <h3>Card 4</h3>
                     <p>quasi, iure dignissimos, libero, omnis sint necessitatibus ad. Hic expedita <br> eligendi
@@ -157,6 +148,56 @@
                 </div>
             </div>
         </div>
+
+        <!--Contact Me-->
+        <div class="by">
+            <div class="container">
+                <div class="content">
+                    <div class="left-side">
+                        <div class="address details">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="topic">Address</div>
+                            <div class="text-one">Rothschild,30</div>
+                            <div class="text-two">Tel Aviv.</div>
+                        </div>
+
+                        <div class="phone details">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="topic">Phone</div>
+                            <div class="text-one">(972)-547792410</div>
+                        </div>
+
+                        <div class="email details">
+                            <i class="fas fa-envelope"></i>
+                            <div class="topic">Email</div>
+                            <div class="text-one">Lisa.setrouk@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-side">
+                    <div class="topic-text">Send me a message</div>
+                    <p>If you have any work form me or ant types of quries related to my tutorial, you can send me a
+                        message here.</p>
+
+                    <form action="#">
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter your name">
+                        </div>
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter your email">
+                        </div>
+                        <div class="input-box message-box">
+                            <textarea></textarea>
+                        </div>
+                        <div class="button">
+                            <input type="button" value="Send Now">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--Footer-->
 
     </main>
 </body>
