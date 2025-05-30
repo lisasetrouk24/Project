@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
     <title>Portfolio</title>
@@ -33,67 +34,84 @@
                 <input type="checkbox" name="check" id="check">
                 <ul>
                     <li><a href="#Home">Home</a></li>
-                    <li><a href="#">About Me</a></li>
+                    <li><a href="#About-me">About Me</a></li>
                     <li><a href="#Projects">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#Contact-Me">Contact Me </a></li>
                 </ul>
             </div>
         </nav>
-        <section class="section" id="Home">
-            <div class="section_container">
-                <div class="content">
-                    <p class="subtitle">HELLO</p>
-                    <h1 class="title">
-                        I'm <span>Lisa<br>a</span>Web Developer
-                    </h1>
-                    <p class="description">
-                        Welcome to my web developer portfolio! I'm lisa, a skilled and
-                        creative web developer with a passion for creating beautiful,
-                        responsive, and user-friendly websites. I've worked on a variety of
-                        web projects, ranging from personal blogs to e-commerce platforms.
-                    </p>
-                    <div class="action_btns">
-                        <button class="hire_me">Hire Me</button>
-                        <button class="portfolio">portfolio</button>
-                    </div>
-                </div>
-                <div class="image">
-                    <img src="/img/portfolio.img.png" alt="portfolio">
-                </div>
-            </div>
-        </section>
     </header>
 
+
+    <!--HOME-->
+
+    <section class="section" id="Home">
+        <div class="section_container">
+            <div class="content">
+                <p class="subtitle">HELLO</p>
+                <h1 class="title">
+                    I'm <span>Lisa<br>a </span>Web Developer
+                </h1>
+                <p class="description">
+                    Welcome to my portfolio Project Creating modern, responsive websites with clean design.
+                </p>
+                <div class="action_btns">
+                    <button class="portfolio">View CV</button>
+                </div>
+            </div>
+            <section class="profile-section">
+                <div class="profile-photo-container">
+                    <div class="photo-bg-shape"></div>
+                    <img src="img/portfolio.img.png" alt="Lisa photo" class="profile-photo">
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!--ABOUT ME-->
+    <section class="about-section" id="about">
+        <div class="about-title-wrapper">
+            <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-container">
+            <div class="about-text">
+                <p>
+                    I'm Lisa Setrouk, a web developer currently studying at HackerU College. I discovered my passion for
+                    coding after learning design and computer science in high school. I build responsive, clean websites
+                    using HTML and CSS, and I'm currently learning JavaScript to improve interactivity.
+                </p>
+                <p>
+                    I enjoy solving problems, thinking ahead, and refining every detail. My goal is to create full
+                    websites
+                    that combine visual design with solid code — simple, functional, and user-friendly.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="img/lisa.jpg" alt="Lisa Setrouk">
+            </div>
+        </div>
+    </section>
     <!-- Skills-->
     <main>
-        <section id="skills" class="skills-section">
-            <div class="cells">
-                <div class="cell">
-                    <img src="img/html-5.png" alt="html logo">
-                    <span>HTML</span>
-                </div>
-
-                <div class="cell">
-                    <img src="img/css-3.png" alt="css logo">
-                    <span>CSS</span>
-                </div>
-
-                <div class="cell">
-                    <img src="img/git.png" alt="javascript logo">
-                    <span>Git</span>
-                </div>
+        <section class="skills-section">
+            <div class="skills-icons">
+                <img src="img/html-5.png" alt="HTML">
+                <img src="img/css-3.png" alt="CSS">
+                <img src="img/git.png" alt="Git">
             </div>
         </section>
 
         <!--container card-->
-        <div class="card-container" id="Projects">
+        <h1 class="title2" id="Projects">My Projects</h1>
+        <div class="card-container">
             <div class="card">
                 <img src="img/pro1.png" alt="card1" />
                 <div class="card-content">
                     <h3>Card 1</h3>
                     <p>quasi, iure dignissimos, libero, omnis sint necessitatibus ad. Hic expedita <br> eligendi
                         tenetur
-                        quisquam id quaerat alias cumque, <br> autem voluptatem in iure ut laudantium tempora</p>
+                    </p>
                     <a href="#" class="btn">Click More</a>
                 </div>
             </div>
@@ -103,7 +121,7 @@
                     <h3>Card 2</h3>
                     <p>quasi, iure dignissimos, libero, omnis sint necessitatibus ad. Hic expedita <br> eligendi
                         tenetur
-                        quisquam id quaerat alias cumque, <br> autem voluptatem in iure ut laudantium tempora</p>
+                    </p>
                     <a href="#" class="btn">Click More</a>
                 </div>
             </div>
@@ -113,7 +131,7 @@
                     <h3>Card 3</h3>
                     <p>quasi, iure dignissimos, libero, omnis sint necessitatibus ad. Hic expedita <br> eligendi
                         tenetur
-                        quisquam id quaerat alias cumque, <br> autem voluptatem in iure ut laudantium tempora</p>
+                    </p>
                     <a href="#" class="btn">Click More</a>
                 </div>
             </div>
@@ -123,7 +141,7 @@
                     <h3>Card 4</h3>
                     <p>quasi, iure dignissimos, libero, omnis sint necessitatibus ad. Hic expedita <br> eligendi
                         tenetur
-                        quisquam id quaerat alias cumque, <br> autem voluptatem in iure ut laudantium tempora</p>
+                    </p>
                     <a href="#" class="btn">Click More</a>
                 </div>
             </div>
@@ -133,52 +151,49 @@
                     <h3>Card 5</h3>
                     <p>quasi, iure dignissimos, libero, omnis sint necessitatibus ad. Hic expedita <br> eligendi
                         tenetur
-                        quisquam id quaerat alias cumque, <br> autem voluptatem in iure ut laudantium tempora</p>
+                    </p>
                     <a href="#" class="btn">Click More</a>
                 </div>
             </div>
             <div class="card">
-                <img src="img/desk-3139127_1280.jpg" alt="card6" />
+                <img src="img/pro6.png" alt="card6" />
                 <div class="card-content">
                     <h3>Card 6</h3>
                     <p>quasi, iure dignissimos, libero, omnis sint necessitatibus ad. Hic expedita <br> eligendi
                         tenetur
-                        quisquam id quaerat alias cumque, <br> autem voluptatem in iure ut laudantium tempora</p>
+                    </p>
                     <a href="#" class="btn">Click More</a>
                 </div>
             </div>
         </div>
 
         <!--Contact Me-->
-        <div class="by">
+        <div class="contacte" id="Contact-Me">
             <div class="container">
-                <div class="content">
-                    <div class="left-side">
-                        <div class="address details">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="topic">Address</div>
-                            <div class="text-one">Rothschild,30</div>
-                            <div class="text-two">Tel Aviv.</div>
-                        </div>
+                <div class="left-side">
+                    <div class="address details">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="topic">Address</div>
+                        <div class="text-one">Rothschild,30</div>
+                        <div class="text-two">Tel Aviv.</div>
+                    </div>
 
-                        <div class="phone details">
-                            <i class="fas fa-phone-alt"></i>
-                            <div class="topic">Phone</div>
-                            <div class="text-one">(972)-547792410</div>
-                        </div>
+                    <div class="phone details">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="topic">Phone</div>
+                        <div class="text-one">(972)-547792410</div>
+                    </div>
 
-                        <div class="email details">
-                            <i class="fas fa-envelope"></i>
-                            <div class="topic">Email</div>
-                            <div class="text-one">Lisa.setrouk@gmail.com</div>
-                        </div>
+                    <div class="email details">
+                        <i class="fas fa-envelope"></i>
+                        <div class="topic">Email</div>
+                        <div class="text-one">Lisa.setrouk@gmail.com</div>
                     </div>
                 </div>
 
                 <div class="right-side">
                     <div class="topic-text">Send me a message</div>
-                    <p>If you have any work form me or ant types of quries related to my tutorial, you can send me a
-                        message here.</p>
+                    <p>If you have any work for me , you can send me a message here.</p>
 
                     <form action="#">
                         <div class="input-box">
@@ -187,8 +202,8 @@
                         <div class="input-box">
                             <input type="text" placeholder="Enter your email">
                         </div>
-                        <div class="input-box message-box">
-                            <textarea></textarea>
+                        <div class="input-box">
+                            <textarea placeholder="message"></textarea>
                         </div>
                         <div class="button">
                             <input type="button" value="Send Now">
@@ -197,8 +212,25 @@
                 </div>
             </div>
         </div>
-        <!--Footer-->
 
+
+        <footer class="site-footer">
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+
+            <ul class="footer-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <p class="footer-credit">&copy; 2025 | Designed by Lisa Setrouk</p>
+        </footer>
     </main>
 </body>
 
