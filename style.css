@@ -150,7 +150,7 @@ ul li a:hover {
     display: flex;
 }
 
-.action_btns button {
+.action_btns .portfolio {
     width: 150px;
     display: inline-block;
     padding: 12px 28px;
@@ -163,6 +163,7 @@ ul li a:hover {
     font-size: 1rem;
     box-shadow: 0 4px 15px rgba(231, 116, 158, 0.3);
     transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 
 .portfolio:hover {
