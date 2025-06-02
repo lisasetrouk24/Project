@@ -23,6 +23,7 @@ a {
 
 body {
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -66,7 +67,7 @@ nav input {
 
 nav .checkbox i {
     font-size: 2rem;
-    color: var(--color-background-light);
+    color: var(--color-pink-dark);
     cursor: pointer;
 
 }
@@ -93,6 +94,91 @@ ul li a:hover {
     border-top-color: var(--color-pink-deep);
     border-bottom-color: var(--color-pink-deep);
     color: var(--color-pink-deep);
+}
+
+
+.nav-menu {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+
+.nav-menu {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.checkbox i {
+    font-size: 2rem;
+    color: var(--color-pink-dark);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav input {
+    display: none;
+}
+
+.checkbox i {
+    font-size: 2rem;
+    color: var(--color-pink-dark);
+    cursor: pointer;
+}
+
+.checkbox .close-icon {
+    display: none;
+}
+
+@media (max-width: 880px) {
+    nav .checkbox {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        /* מוסתר ברירת מחדל */
+        width: 200px;
+        height: 100vh;
+        background-color: #fff;
+        padding: 60px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    nav input[type="checkbox"]:checked~ul {
+        right: 0;
+    }
+
+    /* עיצוב אייקונים */
+    .checkbox i {
+        font-size: 2rem;
+        color: var(--color-pink-dark);
+        cursor: pointer;
+    }
+
+    .close-icon {
+        display: none;
+    }
+
+    #check:checked+label .open-icon {
+        display: none;
+    }
+
+    #check:checked+label .close-icon {
+        display: inline;
+    }
 }
 
 
@@ -206,49 +292,47 @@ ul li a:hover {
     border-radius: 50%;
     object-fit: cover;
     z-index: 2;
-    top: 35px;
+    top: 30px;
     left: 35px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border: 2px solid #ee86af;
 }
 
-@media (width < 750px) {
-    nav .checkbox {
-        display: block;
-    }
-
-    ul {
-        position: absolute;
-        width: 100%;
-        height: calc(100vh - 85px);
-        left: -100%;
-        top: 85px;
-        background-color: var(--extra-light);
-        flex-direction: column;
-        justify-content: center;
-        gap: 3rem;
-    }
-
-    nav #check:checked~ul {
-        left: 0;
-    }
-
-    ul li a {
-        font-size: 1.25rem;
-    }
-
-    .section__container {
-        padding: 10rem 1rem 5rem 1rem;
+@media (max-width: 880px) {
+    .section_container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
         text-align: center;
-        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 60px;
+        gap: 2rem;
     }
 
-    .image {
-        grid-area: 1/1/2/2;
+    .content {
+        align-items: center;
     }
 
-    .action__btns {
-        margin: auto;
+    .description {
+        text-align: center;
+    }
+
+    .action_btns {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .profile-photo-container {
+        width: 320px;
+        height: 320px;
+    }
+
+    .profile-photo {
+        width: 260px;
+        height: 260px;
+    }
+
+    .photo-bg-shape {
+        border-radius: 50%;
     }
 }
 
@@ -256,7 +340,6 @@ ul li a:hover {
 .about-section {
     background-color: #ffe5ee;
     padding: 60px 20px;
-    height: 550px;
 }
 
 .about-title-wrapper {
@@ -284,6 +367,24 @@ ul li a:hover {
     border-radius: 2px;
 }
 
+@keyframes underlineGrow {
+    to {
+        width: 60%;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .about-container {
     display: flex;
     flex-wrap: wrap;
@@ -296,7 +397,7 @@ ul li a:hover {
     text-align: left;
     flex: 1;
     min-width: 280px;
-    text-align: left;
+    text-align: center;
     color: #333;
     font-size: 1.1rem;
     line-height: 1.8;
@@ -309,40 +410,160 @@ ul li a:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* SECTION 3: skills */
-.skills-section {
-    background-color: hsl(0, 0%, 100%);
-    padding: 20px 0;
-    text-align: center;
-    border: 1px solid #f3f3f3;
-}
-
-.skills-icons {
+.about-highlights {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 25px;
-    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
 }
 
-.skills-icons img {
-    width: 40px;
-    height: auto;
-    opacity: 0.9;
+.highlight-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
     transition: transform 0.3s ease;
 }
 
-.skills-icons img:hover {
+.highlight-card:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-card h4 {
+    color: #990f4b;
+    margin-bottom: 10px;
+}
+
+.highlight-card p {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .about-highlights {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .highlight-card {
+        width: 90%;
+    }
+}
+
+
+
+/* SECTION 3: skills */
+.skills {
+    padding: 10px;
+    background-color: #ffffff;
+    text-align: center;
+    border-top: 1px #f3f3f3 solid;
+    border-bottom: 1px #f3f3f3 solid;
+}
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.skill img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.skill img:hover {
     transform: scale(1.1);
 }
 
+.skill p {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+
+@media (max-width: 550px) {
+    .skills-container {
+        gap: 20px;
+    }
+
+    .skill {
+        width: 80px;
+    }
+
+    .skill img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .skill p {
+        font-size: 14px;
+    }
+}
 
 /* SECTION 4: My Porjects */
-.title2 {
+.about-title-wrapper {
+    width: 100%;
     text-align: center;
-    color: var(--color-pink-dark);
-    padding: 45px;
+    margin-bottom: 40px;
 }
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    color: #990F4B;
+    cursor: default;
+}
+
+@keyframes underlineGrow {
+    to {
+        width: 60%;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background-color: #990F4B;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    animation: underlineGrow 0.8s ease forwards;
+    transition: width 0.3s ease-in-out;
+}
+
 
 .card-container {
     display: flex;
@@ -356,6 +577,7 @@ ul li a:hover {
 }
 
 .card {
+    min-height: 450px;
     flex: 0 1 calc(33.333% - 20px);
     background-color: var(--color-background-light);
     border-radius: 8px;
@@ -364,6 +586,12 @@ ul li a:hover {
     display: flex;
     flex-direction: column;
     border: 2px solid #f4aac4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
@@ -397,11 +625,17 @@ ul li a:hover {
     padding: 10px 15px;
     border-radius: 4px;
     text-align: center;
+    transform: translateX(-3px);
+    transition: transform 0.3s ease;
 }
 
+.card-content .btn:hover {
+    background-color: rgb(248, 135, 173);
+    transform: scale(1.05);
+}
 
 /* Responsive for mobile */
-@media (max-width: 900px) {
+@media (max-width: 880px) {
     .card {
         flex: 0 1 calc(50% - 20px);
     }
@@ -414,13 +648,59 @@ ul li a:hover {
 }
 
 /* SECTION 5: CONTACTE ME*/
+.about-title-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    color: #990F4B;
+    cursor: default;
+}
+
+@keyframes underlineGrow {
+    to {
+        width: 60%;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background-color: #990F4B;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    animation: underlineGrow 0.8s ease forwards;
+    transition: width 0.3s ease-in-out;
+}
+
 .contacte {
-    min-height: 900px;
     width: 100%;
     background-color: var(--color-pink-nude);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 60px 20px;
 }
 
 .container {
@@ -522,10 +802,6 @@ textarea {
     resize: none;
 }
 
-.right-side .button {
-    margin-top: 12px;
-}
-
 .right-side .button input[type="button"] {
     color: #fff;
     font-size: 18px;
@@ -543,6 +819,24 @@ textarea {
 }
 
 @media (max-width: 880px) {
+    .about-title-wrapper {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-title::after {
+        width: 40px;
+    }
+
+    .right-side .button {
+        display: flex;
+        justify-content: center;
+    }
+
     .container {
         margin: 40px 0;
         height: 100%;
@@ -560,8 +854,14 @@ textarea {
         flex-wrap: wrap;
     }
 
-    .container .left-side::before {
-        display: none;
+    .left-side::before {
+        height: 2px;
+        width: 70%;
+        top: auto;
+        bottom: 380px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
     }
 
     .container .right-side {
@@ -687,13 +987,7 @@ textarea {
     }
 
     .footer-nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .footer-nav li {
-        margin: 5px 0;
+        display: none;
     }
 
     .footer-credit {
