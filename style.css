@@ -354,7 +354,7 @@ nav input {
 
 /* SECTION 2: ABOUT ME */
 .about-section {
-    background-color: #ffe5ee;
+    background-color: #fde6ee;
     padding: 60px 20px;
 }
 
@@ -402,6 +402,7 @@ nav input {
 }
 
 .about-container {
+
     display: flex;
     flex-wrap: wrap;
     max-width: 1100px;
@@ -428,7 +429,7 @@ nav input {
 }
 
 .highlight-card {
-    background-color: #fff;
+    background: linear-gradient(to bottom, #ffffff, #fff5f9);
     border-radius: 8px;
     padding: 20px;
     width: 250px;
@@ -528,6 +529,20 @@ nav input {
 }
 
 /* SECTION 4: My Porjects */
+.body-section {
+    background: linear-gradient(to bottom, #ffffff, #fff5f9);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 65px 30px;
+    padding: 40px 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
 .about-title-wrapper {
     width: 100%;
     text-align: center;
@@ -575,24 +590,13 @@ nav input {
 }
 
 
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 65px 30px;
-    padding: 40px 40px;
-    max-width: 1200px;
-    margin: auto;
-
-}
-
 .card {
     min-height: 450px;
     flex: 0 1 calc(33.333% - 20px);
     background-color: var(--color-background-light);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(145, 70, 70, 0.1);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
     border: 2px solid #f4aac4;
@@ -618,11 +622,15 @@ nav input {
 }
 
 .card-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
     margin: 0 0 10px;
     color: var(--color-pink-dark);
 }
 
 .card-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
     flex-grow: 1;
     color: #555;
 }
@@ -658,6 +666,15 @@ nav input {
 }
 
 /* SECTION 5: CONTACTE ME*/
+.contacte {
+    width: 100%;
+    background-color: #f8c5d9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+}
+
 .about-title-wrapper {
     width: 100%;
     text-align: center;
@@ -884,7 +901,7 @@ textarea {
 /* SECTION 6: Footer*/
 /* SECTION 6: Footer*/
 .site-footer {
-    background-color: #f5f5f5;
+    background: linear-gradient(to bottom, #ffffff, #fff5f9);
     text-align: center;
     padding: 30px 20px 15px;
     font-family: 'Helvetica Neue', sans-serif;
@@ -899,6 +916,8 @@ textarea {
     line-height: 40px;
     background-color: white;
     border-radius: 50%;
+    border: 0.5px solid rgb(243, 238, 238);
+    box-shadow: 0 5px 8px rgba(138, 137, 137, 0.2);
     color: #333;
     font-size: 18px;
     transition: all 0.3s ease;
